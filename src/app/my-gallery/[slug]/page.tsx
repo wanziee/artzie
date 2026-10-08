@@ -11,6 +11,7 @@ const whatsappBaseUrl = "https://wa.me/6285719855521";
 export default function ArtworkDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const artwork = artworks.find((item) => item.slug === slug);
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
   const [customerName, setCustomerName] = useState("");
   const [customerAddress, setCustomerAddress] = useState("");
 
@@ -56,14 +57,25 @@ export default function ArtworkDetailPage() {
 
       <section className="detail-layout">
         <div className="detail-visual gallery-detail-visual">
-          <Image className="gallery-photo" src={artwork.image} alt={artwork.title} fill sizes="(max-width: 760px) 100vw, 50vw" />
+          <Image className="gallery-photo" src={artwork.images[activePhotoIndex]} alt={`${artwork.title} - foto ${activePhotoIndex + 1}`} fill sizes="(max-width: 760px) 100vw, 50vw" />
+          {artwork.images.length > 1 && (
+            <>
+              <button className="gallery-arrow gallery-arrow-left" type="button" aria-label="Foto sebelumnya" onClick={() => setActivePhotoIndex((activePhotoIndex - 1 + artwork.images.length) % artwork.images.length)}>←</button>
+              <button className="gallery-arrow gallery-arrow-right" type="button" aria-label="Foto berikutnya" onClick={() => setActivePhotoIndex((activePhotoIndex + 1) % artwork.images.length)}>→</button>
+              <div className="gallery-dots" aria-label="Pilih foto">
+                {artwork.images.map((image, index) => (
+                  <button className={index === activePhotoIndex ? "gallery-dot active" : "gallery-dot"} type="button" aria-label={`Buka foto ${index + 1}`} key={`${image}-${index}`} onClick={() => setActivePhotoIndex(index)} />
+                ))}
+              </div>
+            </>
+          )}
           <span className="visual-note">ready to ship</span>
         </div>
 
         <div className="detail-copy">
           <p className="section-label">Artzie / My Gallery</p>
           <h1>{artwork.title}</h1>
-          <p className="detail-description">{artwork.description} Karya original Artzie yang sudah selesai dan siap dikirim untuk menjadi hadiah atau dekorasi personal.</p>
+          <p className="detail-description">{artwork.description} (Karya original Artzie)</p>
           <div className="detail-rule" />
           <div className="gallery-detail-price">{artwork.price}</div>
 

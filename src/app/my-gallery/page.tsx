@@ -20,7 +20,7 @@ export default function MyGalleryPage() {
         {artworks.map((artwork) => (
           <Link className="gallery-item" href={`/my-gallery/${artwork.slug}`} key={artwork.title}>
             <div className="gallery-item-visual">
-              <Image className="service-photo" src={artwork.image} alt={artwork.title} fill sizes="(max-width: 760px) 100vw, 50vw" />
+              <Image className="service-photo" src={artwork.images[0]} alt={artwork.title} fill sizes="(max-width: 760px) 100vw, 50vw" />
             </div>
             <div className="gallery-item-body">
               <div className="gallery-item-top">

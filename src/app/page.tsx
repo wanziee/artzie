@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const whatsappNumber = "6285719855521";
+const additionalWhatsappNumber = "6281244373751";
 const whatsappBaseUrl = `https://wa.me/${whatsappNumber}`;
 
 export default function Home() {
@@ -118,7 +119,7 @@ export default function Home() {
 
       <footer className="footer">
         <div className="footer-brand"><span>artzie</span><p>made with feeling, inspired by teza</p></div>
-        <div className="footer-contact"><p>Pesanan & pembayaran via WhatsApp</p><a href={`${whatsappBaseUrl}?text=Halo%20Artzie%2C%20saya%20ingin%20memesan%20gambar.`}>0857 1985 5521 <span>↗</span></a></div>
+        <div className="footer-contact"><p>Pesanan & pembayaran via WhatsApp</p><a href={`${whatsappBaseUrl}?text=Halo%20Artzie%2C%20saya%20ingin%20memesan%20gambar.`}>0857 1985 5521 <span>↗</span></a><br /><a href={`https://wa.me/${additionalWhatsappNumber}`}>0812 4437 3751 <span>↗</span></a></div>
         <p className="copyright">© 2026 Artzie Studio</p>
       </footer>
     </main>

@@ -202,7 +202,7 @@ export default function ArtzieBoothPage() {
                     />
 
                     <strong>
-                      <small>Start from : </small>
+                      <small></small>
                       Rp50.000
                     </strong>
                   </span>
@@ -233,7 +233,7 @@ export default function ArtzieBoothPage() {
                     />
 
                     <strong>
-                      <small>Start from : </small>Rp80.000
+                     Rp80.000
                     </strong>
                   </span>
                 </label>
@@ -263,7 +263,7 @@ export default function ArtzieBoothPage() {
                     />
 
                     <strong>
-                      <small>Start from : </small>Rp80.000
+                      <small></small>Rp80.000
                     </strong>
                   </span>
                 </label>
