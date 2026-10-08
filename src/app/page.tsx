@@ -89,7 +89,7 @@ export default function Home() {
               <span className="visual-note">3 layout frame</span>
             </div>
             <div className="service-body">
-              <div className="service-title-row"><h3>Photo Booth</h3><span className="available">Available</span></div>
+              <div className="service-title-row"><h3>Sketch Booth</h3><span className="available">Available</span></div>
               <p>Acara makin seru dengan booth foto yang bikin momen selalu berkesan. Tersedia layout 3 frame vertikal, 4 frame vertikal, atau 4 frame kotak 2x2, dengan maksimal 5 orang per frame.</p>
               <Link className="card-link" href="/artzie-booth">Gunakan jasa <span>↗</span></Link>
             </div>
