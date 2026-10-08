@@ -6,9 +6,10 @@ import Image from "next/image";
 
 const whatsappBaseUrl = "https://wa.me/6285719855521";
 const gallerySlides = [
-  { label: "21 x 30 cm", className: "gallery-slide-one", image: "/images/gambar-01.jpg" },
-  { label: "13 x 18 cm", className: "gallery-slide-two", image: "/images/gambar-02.jpg" },
-  { label: "one of one", className: "gallery-slide-three", image: "/images/sketch-01.jpeg" },
+  { label: "21 x 30 cm - White Frame", className: "gallery-slide-one", image: "/images/gambar-01.jpg" },
+  { label: "13 x 18 cm - White Frame", className: "gallery-slide-two", image: "/images/gambar-02.jpg" },
+  { label: "21 x 30 cm - Black Frame", className: "gallery-slide-three", image: "/images/jjk.jpg" },
+  { label: "21 x 30 cm - Black Framee", className: "gallery-slide-four", image: "/images/kalebb.jpg" },
 ];
 
 export default function SketchPage() {
